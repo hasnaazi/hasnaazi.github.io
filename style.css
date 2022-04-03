@@ -1,0 +1,33 @@
+.jumbotron {
+  padding-top: 5rem;
+  background-color: #f5e9c9;
+}
+
+#projects {
+  background-color: #f5e9c9;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.gotopbtn {
+  position: fixed;
+  width: 45px;
+  height: 40px;
+  background-color: #f5e9c9;
+  bottom: 90px;
+  right: 50px;
+  font-size: 20px;
+  border-radius: 7px;
+
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  color: #fd7e14;
+  width: 40px;
+  height: 40px;
+}
