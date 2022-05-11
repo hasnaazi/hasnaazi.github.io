@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <!-- my CSS -->
+
+  <link rel="stylesheet" href="style.css"/>
+  <title>My Portofolio | Hasna Azizah</title>
+
+  <!-- banner -->
+  <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+  />
+
+  <!-- code button -->
+  <link
+      rel="stylesheet"
+      href="hide.js"
+    />
+</head>
+
+<!-- my button back to top -->
+
+<!-- <script src="https://kit.fontawesome.com/22525b34f2.js" crossorigin="anonymous"></script> -->
+
+
+<body>
+ 
+  <!-- awal navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #ffa500">
+    <div class="container">
+      <a class="navbar-brand" href="index.html #container">Hasna Azizah</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html #lead">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html #about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html #projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html #contact">Contact</a>
+          </li>
+      </div>
+    </div>
+  </nav>
+  <!-- akhir navbar -->
+<!-- awal banner2 -->
+<!-- <div class="home-bg">
+    <section class="home" id="home">
+        <div class="content">
+            <h2>Customer Segmentation</h2>
+        </div>
+    </section>
+</div> -->
+
+<!-- akhir banner2 -->
+  <!-- awal banner -->
+  <section id="banner">   
+    <div class="banner-area"></div>
+    <div class="bg-text">
+      <h2>Customer Segmentation</h2>
+    </div>
+  </section>
+  <!-- akhir banner -->
+
+  <!--awal konten  -->
+    <!-- <section id="content">
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <h2>Customer Segmentation with KNN Model and CSV result</h2>
+          </div>
+        </div>
+      </div>
+    </section>  -->
+  <section id="content text-start">
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="col-md-10">
+          <div class="content-area">
+            <h2>Customer Segmentation with KNN Model and CSV Result</h2>
+            <h3><li>Intent</li></h3>
+            <p>
+              The purpose of this notebook is to predict the right group of the new customers. 
+              I will be using the data obtained from Kaggle in this link <a href="https://www.kaggle.com/datasets/abisheksudarshan/customer-segmentation" target="_blank">kaggle</a>.
+              Upon completion I will have practiced combining train and test, encoding numerical and categorical data, as well as analysis and visualization.
+              I will conclude with a csv file that show the ID data test of each cluster.
+            </p>
+  
+            <h3><li>Description of the Data</li></h3>
+            <p>
+              This dataset contains the following data:</p>
+              <table class="table", style="text-align: center; justify-content: center;">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Column</th>
+                    <th scope="col">Detail</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>ID</td>
+                    <td>Unique ID</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Gender</td>
+                    <td>Gender of the customer</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Ever_Merried</td>
+                    <td>Marital status of the customer</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Age</td>
+                    <td>Age of the customer</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Graduated</td>
+                    <td>Is the customer a graduate?</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Profession</td>
+                    <td>Profession of the customer</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Work_Experience</td>
+                    <td>Work Experience in years</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Spending_Score</td>
+                    <td>Score assigned by the mall based on customer behavior and spending nature</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>Family_Size</td>
+                    <td>Family Size of the customer</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>Var_1</td>
+                    <td>Anonymised Category for the customer</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>Segmentation</td>
+                    <td>classified all customers into 4 segments (A, B, C, D )</td>
+                  </tr>
+                </tbody>
+              </table>
+            <h3><li>Import the Dataset and Preview</li></h3> 
+          </div>
+        </div>
+      </div>
+
+        <div class="row justify-content-start">
+          <div class="col-md-10">
+            <div class="content-area">
+              <P>Code
+              <!-- <input type="button" value="HIDE/SHOW" style="background-color: rgb(212, 102, 12)"; id="btn" onclick="clicked2()"> -->
+              <input type="button" value="Hide/Show" style="background-color: rgb(212, 102, 12)" id="btn" onclick="clicked()">
+            </P> 
+              
+
+              <img id="img" src="img/projects/code1_cus.png" alt="" style="justify-content: center; margin-left: 50px;">
+
+              <P>Result
+                <img src="img/projects/result1_cus.png" alt=""></P>
+              
+              <p>shape of train data (8068, 11) <br>
+                shape of test data (2627, 10)
+              </p>
+              <h3><li>Preprocessing</li></h3>
+              <h4>- Review of Data Types</h4>
+              <table class="table", style="text-align: center; justify-content: center; padding-left: 100px;">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Column</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>categorical data</td>
+                      <td>Gender, Ever_Merried, Graduated, Profession, Var_1</td>
+                      
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Ordinal data</td>
+                      <td>Spending_Score</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Numerical data</td>
+                      <td>ID, Age, Work_Experience, Family_Size</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>
+                  Type of Profession based on its segmentation. Each segmentation is dominated by artist profession. Most artist professions are included in segment C.<br>
+                  
+                  <img src="img/projects/segmenprofression.png" alt="" style= "width: 100%;
+                    height: 100%; margin-top: 0px;">
+                </p> 
+                <p>
+                  Type of Graduated based on its segmentation just only has 2 values 'Yes','No'.
+                  Each segmentation is dominated by graduate<br>
+                  
+                  <img src="img/projects/segmengraduated.png" alt="" style= "width: 100%;
+                    height: 100%; margin-top: 0px;">
+                </p> 
+                <p>
+                  Many family members in the range of 1-9 people. Each segmentation is dominated by 2 family members.<br>
+                  
+                  <img src="img/projects/segmenfamily.png" alt="" style= "width: 100%;
+                    height: 100%; margin-top: 0px;">
+                </p>
+                <p>
+                  The Ever_Married column category has 2 values namely 'Yes','No'. Each segmentation is dominated by people who have been married. 
+                  Segmentation D has the most members ever married<br>
+                  
+                  <img src="img/projects/segmenmarried.png" alt="" style= "width: 100%;
+                    height: 100%; margin-top: 0px;">
+                </p>
+
+                <p>
+                  The Ever_Married column category has 3 values namely 'Low','Average','Heigh'. Each segmentation has a 
+                  low spending score, except for segment C, which has high and average spending score.<br>
+                  
+                  <img src="img/projects/segmenspending.png" alt="" style= "width: 100%;
+                    height: 100%; margin-top: 0px;">
+                </p>
+                  
+              
+
+                
+
+
+                <h4>- Combine Train and Test</h4>
+                <P>Code
+                  <!-- <input type="button" value="HIDE/SHOW" style="background-color: rgb(212, 102, 12)"; id="btn" onclick="clicked2()"> -->
+                  <input type="button" value="Hide/Show" style="background-color: rgb(212, 102, 12)" id="btn" onclick="klik()">
+                </P>
+                <img id="img2" src="img/projects/code2_cus.png" alt="" style="justify-content: center; margin-left: 50px; height: 100%; width: 100%;">
+
+                <h4>- Demografic Info</h4>
+                <p style="margin-bottom: 0px;">There are more men than women</p>
+                <img src="img/projects/result3_cus.png" alt="" style="justify-content: center; margin-left: 75px; margin-bottom: 5px;margin-top: 5px;">
+                <p style="margin-bottom: 0px;">The average Work_Experience of respondents is under 5 years. 
+                  The average Family_Size of respondents is 3. The average Age of respondents is under 43.</p>
+                <img src="img/projects/result4_cus.png" alt="" style="justify-content: center; margin-left: 75px;">
+                <p style="margin-bottom: 0px;">There are 9 professions including Artist, Healthcare, Entertainment, Engineer,
+                  Doctor, Lawyer, Executive, Marketing, Homemaker. Profession Artist is the most and Homemaker is the least.</p>
+                <img src="img/projects/result5_cus.png" alt="" style="justify-content: center; margin-left: 75px;">
+
+                <h4>- Check For Empty Values</h4>
+                <p>After train and test are combined, the number of null values is shown in the image below.
+                  Segmentation is the target for which the value will be sought. Only 3 columns that do not have null values, namely Gender, Age and Spending Score. 
+                </p>
+                <p style="padding-top: 0px; padding-left: 50px;"> <img src="img/projects/result6_cus.png" alt=""> &nbsp; &nbsp; <img src="img/projects/result7_cus.png" alt=""> </p>
+                <h4>- Cleaning Data</h4>
+                <p>Cleaning data is adjusted to the type of data and data needs that we will use to build the model.<br>  
+                  - Column Var_1 dropped because it is not needed<br>
+                  - Empty values in numeric data types (columns : Age,Work_Experience, Family_Size) are filled with mode<br>
+                  - Empty values in the Categorical data type (column:Ever_Married, Profession, Graduated, Gender) are filled with the words none and then the encoder label is carried out <br>
+                  - Empty values in ordinal data type (column: Spending_Score) are filled with label mapping 'Low' : 1, 'Average':2, 'High':3<br>
+                Here's the result from cleaning data process: <img src="img/projects/result8_cus.png" alt=""><br>
+                Beautiful. We have no missing values. Data that is encoded numerically in a way that more contextually similar 
+                answers are closer together in euclidean space. But we need to use min max scaler, transform features by scaling each feature to a given range between 0 and 1. <br>
+                <img src="img/projects/result9_cus.png" alt=""><br>
+                We should be good to go for clustering. But before it, I want to know correlation among the columns in the dataframe.<br>
+                <img src="img/projects/result12_cus.png" alt=""><br><br>
+
+
+                Profession, Graduated, Age, Ever_Merried have a big influence on segmentation (target).             
+                  
+              </p>
+
+
+                <h3><li>Split Train and Test Data</li></h3>
+                <p>The final target for this model is to know about the segmentation from ID data test. The segmentation consist of 4 types : A,B,C,D<br>
+                Code <input type="button" value="Hide/Show" style="background-color: rgb(212, 102, 12)" id="btn" onclick="kluk()"><br>
+                <img id="img3" src="img/projects/code3_cus.png" alt=""><br>
+                Result:
+                train final (8068, 9), test final (2627, 9)
+                </p>
+
+                <h3><li>Using KNN Method</li></h3>
+                <p>
+                  Code <input type="button" value="Hide/Show" style="background-color: rgb(212, 102, 12)" id="btn" onclick="klek()"><br>
+                  <img id="img4" src="img/projects/code4_cus.png" alt=""><br>
+
+                  Because we need to change the final result in categorical value, meanwhile in KNN method we have to change all data to numerical value,
+                  so I have prepared data dict from segmentation train data. OrderedDict([('A', 8061), ('B', 8068), ('C', 8062), ('D', 8066)]). 
+                  The next  step is make csv file from model was built. <br>
+                  Code <input type="button" value="Hide/Show" style="background-color: rgb(212, 102, 12)" id="btn" onclick="ais()"><br>
+                  <img id="hihi" src="img/projects/code5_cus.png" alt=""><br><br>
+
+                  It's the result
+                  <img src="img/projects/result10_cus.png" alt=""><br>
+
+                  The results are still in the form of dummies. To convert it to regular form, I created a separate data frame for ID and 
+                    created a segmentation with an index of 1. Then recombined it based on the index equation. So that the following results are obtained:<br>
+                    <img src="img/projects/result11_cus.png" alt=""><br>
+                    Code details can be checked at the following link <a href="https://www.kaggle.com/code/zainhana/customer-segmentation-with-kkn-method-final-resul">kaggle</a>
+                  </p> 
+                <h3><li>Conclusion</li></h3>
+                <p>In conclusion, we practiced our data preprocessing. From the four types of segmentation as targets, here's the result: <br></br>
+                  Segmentation A: Entertainment, Engineer, Lawyer who has graduated from college with family members
+                      1-2 people and never married, low spending score <br></br>
+
+                      Segmentation B:
+                      executives who have graduated from college with family members
+                      1-2 people and never married, low spending score <br></br>
+
+                      Segmentation C:
+                      Artists who have graduated from college with 2 family members and have been married,
+                      spending score high or average<br></br>
+
+                      Segmentation D:
+                      Healthcare, doctor, homemaker, marketing or people who have not graduated from college with family members
+                      3-4 people and never married, low spending score<br>
+
+                      <b>Suggestion :</b>  <br>
+                      - Segmentation A, because it is dominated by mature men of approximately 30 years from the Entertainment, Engineer, Lawyer professions are
+                       suitable for entering the customer category with the need for tools that support the appearance and the latest technology products <br>
+
+                      - Segmentation B can be done by offering household products and long-term investments such as gold, land and others <br>
+                      - Segmentation C is the right target to advertise products that are up to date with youth advertising style <br>
+
+                      - Segmentation D is suitable for selling promo or discounted items, washing warehouses, goods with rijek <br>
+                </p>
+            </div>
+               
+                
+
+        
+            
+          </div>
+          
+        </div>
+        <footer class="text-white text-center pb-3" style="background-color: #fd7e14;">
+            <p>Created with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+              </svg> by <b>Hasna Azizah</b></p>
+          </footer>
+        
+    </div>
+    
+
+</section>
+<section>
+    <div class="container">
+        <div class="conter-area">
+           
+
+
+        </div>
+
+
+    </div>
+    
+</section>
+
+</body>
+  <!-- awal scrip javascrip untuk form contact -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <script src="hideshow.js"></script>
+</html>
